@@ -1,0 +1,106 @@
+html, body {
+	font-family: helvetica, arial, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+#main {
+	width: 980px;
+	margin: 0 auto;
+}
+header {
+	margin-bottom: 25px;
+}
+header h1 {
+	background: url('/img/compsoc.png');
+	width: 233px;
+	height: 41px;
+	margin: 25px 0 9px 0;
+}
+header h1 span {
+	display: none;
+}
+
+nav {
+	float: right;
+	padding: 10px;
+	background: #cc3333;
+	color: #fff;
+}
+nav a {
+	color: #fff;
+	text-decoration: none;
+	border-bottom: dotted 1px #fff;
+}
+nav a:hover {
+	border-bottom: solid 1px #fff;
+}
+.quote {
+	margin-left: 50px;
+}
+/* type */
+p {
+	padding: 10px 0;
+}
+pre, textarea {
+	text-align: left;
+	font-family: courier;
+	overflow: auto;
+	background: #222;
+	color: #fff;
+	padding: 10px;
+	font-size: 12px;
+}
+a {
+	color: #cc3333;
+	border-bottom: dotted #cc3333 1px;
+	text-decoration: none;
+}
+footer {
+	text-align: center;
+	clear: both;
+}
+/* form */
+textarea {
+	width: 960px;
+}
+button[type=submit] {
+	background: #cc3333;
+	color: #fff;
+	border: none;
+	line-height: 20px;
+	font-size: 20px;
+	padding: 10px;
+}
+.submit {
+	text-align: center;
+}
+/* voting */
+.vote_actions {
+	float: left;
+	display: block;
+}
+.vote {
+	display: block;
+	background: url('/img/votes.png');
+	border: none;
+	text-indent: -999999em;
+	width: 32px;
+	height: 17px;
+	cursor: pointer;
+}
+.up:hover {
+	background-position: 32px 0;
+}
+.down:hover {
+	background-position: 32px 17px;
+}
+.vote_count {
+	padding: 5px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+.down {
+	background-position: 0 17px;
+}

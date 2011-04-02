@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CompSoc IRC Quotes!</title>
+	<link rel="stylesheet" type="text/css" href="/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="/css/main.css" />
+	<script type="text/javascript"
+		src="http://code.jquery.com/jquery-1.5.2.min.js">
+	</script>
+	<script type="text/javascript" src="/js/voting.js"></script> 
+</head>
+<body>
+<div id="main">
+	<nav>
+		<% if current_user %>
+			Hello <%= current_user.first_name %>!
+			<a href="/add">Add a quote</a> - 
+			<a href="/logout">Sign out</a>
+		<% else %>
+			<a href="/auth/facebook">Sign in with Facebook</a>
+		<% end %>
+	</nav>
+
+	<header>
+		<a href="/"><h1><span>COMPSOC</span></h1></a>
+	</header>
+
+	<%= yield %>
+
+	<footer>
+		<p>Made by <a href="http://oliver.kingshott.com/">oliland</a></p>
+	</footer>
+</div>
+</body>
+</html>

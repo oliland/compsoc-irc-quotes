@@ -1,0 +1,22 @@
+<p>Sort by: <a href="/?sort=votes">Top</a> - <a href="/">New</a></p>
+<% @quotes.each do |quote| %>
+	<div class="vote_actions">
+		<button class="vote up" quote="<%= quote.id %>"
+			direction="up">Upvote</button>
+
+		<p class="vote_count" id="quote_<%= quote.id %>_votes">
+			<%= quote.votes %>
+		</p>
+
+		<button class="vote down" quote="<%= quote.id %>"
+			direction="down">Downvote</button>
+	</div>
+
+	<div class="quote">
+
+		<pre><code><%= quote.content %></code></pre>
+
+		<p class="quote_details">Submitted by <%= User[quote.user_id].first_name %>
+			@ <%= quote.created_at %></p>
+	</div>
+<% end %>
