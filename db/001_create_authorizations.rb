@@ -1,6 +1,6 @@
 Sequel.migration do 
   up do
-    create_table! :authorizations do
+    create_table :authorizations do
       primary_key :id
 
       String :provider

@@ -1,6 +1,6 @@
 Sequel.migration do
   up do
-    create_table! :users do
+    create_table :users do
       primary_key :id
       
       String      :first_name,        :null => false

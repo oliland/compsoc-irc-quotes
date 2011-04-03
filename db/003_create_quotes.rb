@@ -1,6 +1,6 @@
 Sequel.migration do
   up do  
-    create_table! :quotes do
+    create_table :quotes do
       primary_key :id
 
       Integer :user_id, :null => false
