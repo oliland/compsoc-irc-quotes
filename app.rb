@@ -1,7 +1,8 @@
-require 'erb'
-require 'omniauth'
 require 'sinatra'
 require 'sinatra/sequel'
+
+require 'omniauth'
+require 'haml'
 
 configure :development do
   set :database, 'sqlite://data.db'
@@ -100,11 +101,11 @@ class CompSocQuotes < Sinatra::Base
         @quotes = Quote.order(:votes.desc).all
     end
     @quotes ||= Quote.order(:created_at.desc).all
-    erb :index
+    haml :index
   end
 
   get '/add' do
-    erb :form
+    haml :form
   end
 
   post '/add' do

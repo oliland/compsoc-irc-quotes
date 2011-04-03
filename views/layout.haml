@@ -1,0 +1,35 @@
+!!!
+%html
+  %head
+    %title CompSoc IRC Quotes!
+
+    %link{:href => "/css/reset.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/css/main.css", :rel => "stylesheet", :type => "text/css"}/
+
+    %script{:src => "http://code.jquery.com/jquery-1.5.2.min.js", :type => "text/javascript"}
+    %script{:src => "/js/jquery.timeago.js", :type => "text/javascript"}
+    %script{:src => "/js/voting.js", :type => "text/javascript"}
+    :javascript
+      /* JQuery TimeAgo Date Stamps */
+      jQuery(document).ready(function() {
+        jQuery("abbr.timeago").timeago();
+      });
+  %body
+    #main
+      %nav
+        - if current_user
+          Hello #{current_user.first_name}!
+          %a{:href => "/add"} Add a quote
+          \-
+          %a{:href => "/logout"} Sign out
+        - else
+          %a{:href => "/auth/facebook"} Sign in with Facebook
+      %header
+        %a{:href => "/"}
+          %h1
+            %span COMPSOC
+      = yield
+      %footer
+        %p
+          Made by
+          %a{:href => "http://oliver.kingshott.com/"} oliland

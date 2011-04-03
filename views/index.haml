@@ -1,0 +1,18 @@
+%p
+  Sort by:
+  %a{:href => "/?sort=votes"} Top
+  \-
+  %a{:href => "/"} New
+- @quotes.each do |quote|
+  .vote_actions
+    %button.vote.up{:direction => "up", :quote => quote.id} Upvote
+    %p.vote_count{:id => "quote_#{quote.id}_votes"}
+      = quote.votes
+    %button.vote.down{:direction => "down", :quote => quote.id} Downvote
+  .quote
+    %pre
+      %code= h quote.content
+    %p.quote_details
+      Submitted by #{User[quote.user_id].first_name}
+      %abbr.timeago{:title => quote.created_at}
+        on #{quote.created_date}
