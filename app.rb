@@ -42,7 +42,7 @@ class Vote < Sequel::Model
 
   def self.vote(user_id, quote_id, direction)
     user  = User[:id => user_id]
-    quote = Quote[:id => quote_id]"
+    quote = Quote[:id => quote_id]
     value = 1 if direction == 'up'
     value = -1 if direction == 'down'
     vote = Vote[:user_id => user.id, :quote_id => quote.id]
