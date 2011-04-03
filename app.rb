@@ -8,7 +8,7 @@ configure :development do
 end
 
 configure :production do
-  set :database, 'postgres://oliland:Hatemachine@localhost/irc'
+  set :database, 'postgres://postgres:Hatemachine@localhost/irc'
 end
 
 class User < Sequel::Model
