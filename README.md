@@ -1,13 +1,9 @@
-                                 _            
-                __ _ _   _  ___ | |_ ___  ___ 
-               / _` | | | |/ _ \| __/ _ \/ __|
-              | (_| | |_| | (_) | ||  __/\__ \
-               \__, |\__,_|\___/ \__\___||___/
-                  |_|                         
+Compsoc IRC Quotes
+==================
 
-             It's like qdb.us but a lot smaller.
+_It's like qdb.us but a lot smaller._
 
-Contributors
-============
+[Contributors][1] | [Network Graph][2]
 
-<https://github.com/oliland/compsoc-irc-quotes/contributors>
+[1]: https://github.com/oliland/compsoc-irc-quotes/contributors
+[2]: https://github.com/xoebus/compsoc-irc-quotes/network
