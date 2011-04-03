@@ -74,6 +74,9 @@ class CompSocQuotes < Sinatra::Base
   enable :sessions
 
   helpers do
+    include Rack::Utils
+    alias_method :h, :escape_html
+
     def current_user
       if session[:user]
         User[:id => session[:user]]
