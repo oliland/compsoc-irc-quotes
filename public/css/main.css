@@ -104,3 +104,6 @@ button[type=submit] {
 .down {
 	background-position: 0 17px;
 }
+.timeago {
+  border-bottom: 1px dotted #333;
+}
