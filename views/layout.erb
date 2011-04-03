@@ -7,8 +7,14 @@
 	<script type="text/javascript"
 		src="http://code.jquery.com/jquery-1.5.2.min.js">
 	</script>
-	<script src="jquery.timeago.js" type="text/javascript"></script>
+	<script src="/js/jquery.timeago.js" type="text/javascript"></script>
 	<script type="text/javascript" src="/js/voting.js"></script> 
+	<script>
+		/* JQuery TimeAgo Date Stamps */
+		jQuery(document).ready(function() {
+		  jQuery("abbr.timeago").timeago();
+		});
+	</script>
 </head>
 <body>
 <div id="main">
