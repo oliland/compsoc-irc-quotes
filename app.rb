@@ -4,6 +4,8 @@ require 'sinatra/sequel'
 require 'omniauth'
 require 'haml'
 
+set :haml, {:format => :html5}
+
 configure :development do
   set :database, 'sqlite://data.db'
 end
