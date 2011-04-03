@@ -14,7 +14,7 @@
 
 	<div class="quote">
 
-		<pre><code><%= quote.content %></code></pre>
+		<pre><code><%=h quote.content %></code></pre>
 
 		<p class="quote_details">Submitted by <%= User[quote.user_id].first_name %>
 			@ <%= quote.created_at %></p>
