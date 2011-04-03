@@ -29,12 +29,8 @@ class Quote < Sequel::Model
     super
   end
 
-  def created
-    self.created_at.iso8601
-  end
-
-  def human
-    self.created_at.strftime "on %B %d, %Y"
+  def created_date
+    self.created_at.strftime "%B %d, %Y"
   end
 end
 

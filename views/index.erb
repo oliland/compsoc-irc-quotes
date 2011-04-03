@@ -17,7 +17,9 @@
 		<pre><code><%=h quote.content %></code></pre>
 
 		<p class="quote_details">Submitted by <%= User[quote.user_id].first_name %>
-			<abbr class="timeago" title="<%= quote.created %>"><%= quote.human %></abbr>
+      <abbr class="timeago" title="<%= quote.created_at %>">
+        on <%= quote.created_date %>
+      </abbr>
 		</p>
 	</div>
 <% end %>
