@@ -1,0 +1,8 @@
+dev_db: "sqlite://data.db"
+prod_db: "postgres://postgres:Hatemachine@localhost/irc"
+
+bot_server: "irc.imaginarynet.org.uk"
+bot_nick: qbot
+
+bot_channels:
+ - "#compsoc"

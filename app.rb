@@ -2,10 +2,12 @@ require 'erb'
 require 'omniauth'
 require 'sinatra'
 require 'sinatra/sequel'
+require 'yaml'
 
+configuration = YAML.load_file("./settings.yaml")
 
 configure :development do
-  set :database, 'sqlite://data.db'
+  set :database, configuration["dev_db"]
   # TODO
 =begin
   OmniAuth.config.mock_auth[:facebook] = {
@@ -16,7 +18,7 @@ configure :development do
 end
 
 configure :production do
-  set :database, 'postgres://postgres:Hatemachine@localhost/irc'
+  set :database, configuration["prod_db"]
 end
 
 require './models/authorization'
@@ -69,7 +71,7 @@ class CompSocQuotes < Sinatra::Base
     Quote.create(
       :user_id => current_user.id,
       :content => params["content"],
-      :votes => 0,
+      :votes => 0
     )
     redirect '/'
   end
@@ -87,7 +89,7 @@ class CompSocQuotes < Sinatra::Base
                                         :uid => data["uid"]) do |a|
       user = User.create(
         :first_name => data["user_info"]["first_name"],
-        :last_name => data["user_info"]["last_name"],
+        :last_name => data["user_info"]["last_name"]
       )
       a.user_id = user.id
       a.save
